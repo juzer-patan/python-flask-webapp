@@ -1,0 +1,79 @@
+<!-- Store this code in 'index.html' file inside the 'templates' folder-->
+
+<style>
+
+/* Store this code in 'style.css' file inside the 'static' folder*/
+
+			.header{
+				padding: 5px 120px;
+				width: 150px;
+				height: 70px;
+				background-color: #dbab0c;
+			}
+		
+			.border{
+				padding: 80px 50px;
+				width: 400px;
+				height: 450px;
+				border: 1px solid #dbab0c;
+				border-radius: 0px;
+				background-color: #cdc89a;
+			}
+
+			.btn {
+				padding: 10px 40px;
+				background-color: #dbab0c;
+				color: #FFFFFF;
+				font-style: oblique;
+				font-weight: bold;
+				border-radius: 10px;
+			}
+
+			.textbox{
+				padding: 10px 40px;
+				background-color: #dbab0c;
+				text-color: #FFFFFF;
+				border-radius: 10px;
+			}
+				
+			::placeholder {
+				color: #FFFFFF;
+				opacity: 1;
+				font-style: oblique;
+				font-weight: bold;
+			}
+
+			.word{
+				color: #FFFFFF;
+				font-style: oblique;
+				font-weight: bold;
+			}
+
+			.bottom{
+				color: #b18715;
+				font-size: large;
+				font-style: oblique;
+				font-weight: bolder;
+			}
+
+</style>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Index </title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">					
+	</head>
+	<body></br></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Index</h1>
+			</div></br></br></br>
+				<h1 class="bottom">
+					Hi {{session.username}}!!</br></br> Welcome to the index page...				
+				</h1></br></br></br>
+				<a href="{{ url_for('logout') }}" class="btn">Logout</a>
+		</div>
+		</div>
+	</body>
+</html>

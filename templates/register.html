@@ -1,0 +1,85 @@
+<!-- Store this code in 'register.html' file inside the 'templates' folder -->
+
+<style>
+
+/* Store this code in 'style.css' file inside the 'static' folder*/
+
+			.header{
+				padding: 5px 120px;
+				width: 150px;
+				height: 70px;
+				background-color: #dbab0c;
+			}
+		
+			.border{
+				padding: 80px 50px;
+				width: 400px;
+				height: 450px;
+				border: 1px solid #dbab0c;
+				border-radius: 0px;
+				background-color: #cdc89a;
+			}
+
+			.btn {
+				padding: 10px 40px;
+				background-color: #dbab0c;
+				color: #FFFFFF;
+				font-style: oblique;
+				font-weight: bold;
+				border-radius: 10px;
+			}
+
+			.textbox{
+				padding: 10px 40px;
+				background-color: #dbab0c;
+				text-color: #FFFFFF;
+				border-radius: 10px;
+			}
+				
+			::placeholder {
+				color: #FFFFFF;
+				opacity: 1;
+				font-style: oblique;
+				font-weight: bold;
+			}
+
+			.word{
+				color: #FFFFFF;
+				font-style: oblique;
+				font-weight: bold;
+			}
+
+			.bottom{
+				color: #b18715;
+				font-size: large;
+				font-style: oblique;
+				font-weight: bolder;
+			}
+
+</style>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Register </title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">			
+	</head>
+	<body></br></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Register</h1>
+			</div></br></br></br>
+			<h2 class="word">
+				<form action="{{ url_for('register') }}" method="post">
+				<div class="msg">{{ msg }}</div>
+					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
+					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
+					<input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
+					<input type="submit" class="btn" value="Sign Up"></br>
+				</form>
+			</h2>
+			<p class="bottom">Already have an account? <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
+		</div>
+		</div>
+	</body>
+</html>
